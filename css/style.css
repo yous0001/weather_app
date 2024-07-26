@@ -74,13 +74,13 @@ header{
 .form button{
     background-color: var(--main-color);
 }
-header .row .col-md-4{
+header .row .col-lg-4{
     background-color:#323544;
     padding: 0;
     margin: 0;
 }
 
-.row .col-md-4.item-two{
+.row .col-lg-4.item-two{
     background-color: #262936;
 }
 .item-title{
@@ -88,7 +88,20 @@ header .row .col-md-4{
     width: 100%;
     padding: 10px;
 }
-
+.today-weather{
+    display: flex;
+    flex-direction: column;
+}
+@media only screen and (min-width: 768px) {
+    .today-weather{
+        flex-direction: row;
+    }
+}
+@media only screen and (min-width: 992px) {
+    .today-weather{
+        flex-direction: column;
+    }
+}
 .today-temp{
     font-size: 90px;
     font-weight: 700;
@@ -103,7 +116,7 @@ header .row .col-md-4{
 .today-details span{
     margin-inline-end: 20px;
 }
-.row .col-md-4 .max-degree{
+.row .col-lg-4 .max-degree{
     font-size: 24px;
     font-size: 1.7142857143em;
     color: white;
