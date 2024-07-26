@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,11 +9,151 @@
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body>
-    
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand d-flex" href="#">
+                <img src="./imgs/logo@2x.png" width="64" height="38">
+                <div class="logo-text ms-2">
+                    <h1>Weather</h1>
+                    <p>tagline goes here</p>
+                </div>
+            </a>
+            <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
+                <ul class="navbar-nav gap-3 ms-auto  mt-2 mt-lg-0">
+                    <li class="nav-item ">
+                        <a class="nav-link px-4 active" href="#" aria-current="page">Home<span
+                                class="visually-hidden">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-4" href="#">News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-4" href="#">Live cameras</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-4" href="#">Photos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-4" href="#">contacts</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header class="pb-5">
+        <div class="container">
+            <div class="form">
+                <input type="text" placeholder="Find your location..." id="location-form" class="rounded-pill">
+                <button type="submit" class="btn rounded-pill">Find</button>
+            </div>
+
+            <div class="row rounded-2 overflow-hidden">
+                <div class="col-md-4" id="today">
+                    <div class="item-title">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <p>Friday</p>
+                            <p>26July</p>
+                        </div>
+                    </div>
+                    <div class="item-body p-3">
+                        <p>Cairo</p>
+                        <p id="temp" class="today-temp">33.5<sup>o</sup>C</p>
+                        <div class="today-icon">
+                            <img src="./imgs/113.png" width="90" height="90">
+                        </div>
+                        <p class="today-status">clear</p>
+                        <div class="today-details">
+                            <span>
+                                <img src="./imgs/icon-umberella.png">20%
+                            </span>
+                            <span>
+                                <img src="./imgs/icon-umberella.png">18km/h
+                            </span>
+                            <span>
+                                <img src="./imgs/icon-umberella.png">East
+                            </span>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col-md-4 item-two">
+                    <div class="item-title">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <p>Saturday</p>
+                        </div>
+                    </div>
+                    <div class="item-body p-3">
+                        <div class="item-body-content text-center p-5">
+                            <img src="./imgs/113 (1).png" class="pb-4">
+                            <div class="max-degree">
+                                39.9<sup>o</sup>C
+                            </div>
+                            <div class="min-degree">
+                                26.5<sup>o</sup>C
+                            </div>
+                            <div class="day-status">
+                                sunny
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="item-title">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <p>Sunday</p>
+                        </div>
+                    </div>
+                    <div class="item-body p-3">
+                        <div class="item-body-content text-center p-5">
+                            <img src="./imgs/113 (1).png" class="pb-4">
+                            <div class="max-degree">
+                                39.9<sup>o</sup>C
+                            </div>
+                            <div class="min-degree">
+                                26.5<sup>o</sup>C
+                            </div>
+                            <div class="day-status">
+                                sunny
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <footer>
+        <div class="container">
+            <div class="row gx-5">
+                <div class="col-md-8">
+                    <div class="form p-0">
+                        <input type="text" placeholder="Enter your email to subscribe..." id="email-form" class="rounded-pill">
+                        <button type="submit" class="btn rounded-pill">subscribe</button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="social-links ms-5">
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-google-plus"></i></a>
+                        <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+                    </div>
+                </div>
+            </div>
+            <p class="colophon my-3">Copyright 2014 Company name. Designed by Themezy. All rights reserved</p>
+        </div>
+    </footer>
 
     <script src="./jquery/code.jquery.com_jquery-3.7.0.min.js"></script>
     <script src="./js/bootstrap.bundle.min.js"></script>
     <script src="./js/script.js"></script>
 </body>
+
 </html>

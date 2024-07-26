@@ -1,0 +1,140 @@
+:root{
+    --main-color:#009ad8;
+}
+body{
+    color: #bfc1c8;
+    font-family: "Roboto", "Open Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.5;
+    background: #1e202b;
+    
+}
+
+/*nav start*/
+.navbar{
+    padding-block: 50px;
+    background-color: transparent !important;
+    
+}
+.nav-item a{
+    color: white;
+}
+
+a.nav-link{
+    display: inline-block;
+    padding: 5px 25px;
+    border: 2px solid transparent;
+    border-radius: 0px;
+    color: white;
+    -webkit-transition: 0.3s ease;
+    transition: 0.5s ease;
+    font-weight: 400;
+}
+.navbar-nav .nav-link.active, .navbar-nav .nav-link.show , a.nav-link:hover{
+    border-color: var(--main-color) !important;
+    color: var(--main-color) !important;
+    border-radius: 30px;
+}
+.logo-text h1{
+    font-size: 16px;
+    font-weight: 700;
+}
+.logo-text p{
+    color: #bfc1c8;
+    font-size: 10px;
+}
+/*nav end*/
+/*header start*/
+header{
+    background-image:url(../imgs/banner.png) ;
+    background-repeat: no-repeat;
+    min-height: 70vh;
+}
+.form{
+    padding-block: 70px;
+    position: relative;
+}
+.form button{
+    position: absolute;
+    color: white;
+    bottom: 50%;
+    right: 5px;
+    transform: translateY(50%);
+    padding: 10px 30px;
+    
+}
+.form input{
+    width: 100%;
+    padding: 20px 50px 20px 20px;
+    background: #1e202b !important;
+    color: white !important;
+    border: none !important;
+}
+.form button{
+    background-color: var(--main-color);
+}
+header .row .col-md-4{
+    background-color:#323544;
+    padding: 0;
+    margin: 0;
+}
+
+.row .col-md-4.item-two{
+    background-color: #262936;
+}
+.item-title{
+    background-color: rgba(0, 0, 0, 0.1);
+    width: 100%;
+    padding: 10px;
+}
+
+.today-temp{
+    font-size: 90px;
+    font-weight: 700;
+    color: white;
+}
+.today-icon{
+    width: fit-content;
+}
+.today-status{
+    color:var(--main-color);
+}
+.today-details span{
+    margin-inline-end: 20px;
+}
+.row .col-md-4 .max-degree{
+    font-size: 24px;
+    font-size: 1.7142857143em;
+    color: white;
+    font-weight: 700;
+
+}
+.day-status{
+    color: var(--main-color);
+    margin: 20px 0;
+}
+
+footer{
+    background: #262936;
+    padding: 50px 0;
+}
+
+footer .social-links a {
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    border-radius: 50%;
+    background: #1e202b;
+    color: var(--main-color);
+    text-align: center;
+    line-height: 2;
+    -webkit-transition: 0.3s ease;
+    transition: 0.3s ease;
+    font-size: 20px;
+    font-size: 1.4285714286em;
+}
+footer .social-links a:hover{
+    background-color: var(--main-color);
+    color: white;
+}
