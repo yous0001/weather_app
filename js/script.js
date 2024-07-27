@@ -1,4 +1,5 @@
 let row =document.querySelector("header .row");
+let searchLocation=document.getElementById("location-form")
 let data=[]
 
 async function getWeather(location="Sohag"){
@@ -97,3 +98,8 @@ function display(){
     row.innerHTML=cartona
 }
 getWeather()
+
+async function search(){
+    if(searchLocation.value.length>=3)
+        await getWeather(searchLocation.value)
+}

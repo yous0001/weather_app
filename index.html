@@ -50,84 +50,12 @@
     <header class="pb-5">
         <div class="container">
             <div class="form">
-                <input type="text" placeholder="Find your location..." id="location-form" class="rounded-pill">
+                <input type="text" placeholder="Find your location..." id="location-form" onkeyup="search()" class="rounded-pill">
                 <button type="submit" class="btn rounded-pill">Find</button>
             </div>
 
             <div class="row rounded-2 overflow-hidden">
-                <div class="col-lg-4" id="today">
-                    <div class="item-title">
-                        <div class="d-flex justify-content-between align-items-center">
-                            <p>Friday</p>
-                            <p>26July</p>
-                        </div>
-                    </div>
-                    <div class="item-body p-3">
-                        <p>Cairo</p>
-                        <div class="today-weather">
-                            <p id="temp" class="today-temp">33.5<sup>o</sup>C</p>
-                            <div class="today-icon">
-                                <img src="./imgs/113.png" width="90" height="90">
-                            </div>
-                        </div>
-                        <p class="today-status">clear</p>
-                        <div class="today-details">
-                            <span>
-                                <img src="./imgs/icon-umberella.png">20%
-                            </span>
-                            <span>
-                                <img src="./imgs/icon-wind.png">18km/h
-                            </span>
-                            <span>
-                                <img src="./imgs/icon-compass.png">East
-                            </span>
-                        </div>
-
-                    </div>
-
-                </div>
-                <div class="col-lg-4 item-two">
-                    <div class="item-title">
-                        <div class="d-flex justify-content-center align-items-center">
-                            <p>Saturday</p>
-                        </div>
-                    </div>
-                    <div class="item-body p-3">
-                        <div class="item-body-content text-center p-5">
-                            <img src="./imgs/113 (1).png" class="pb-4">
-                            <div class="max-degree">
-                                39.9<sup>o</sup>C
-                            </div>
-                            <div class="min-degree">
-                                26.5<sup>o</sup>C
-                            </div>
-                            <div class="day-status">
-                                sunny
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="item-title">
-                        <div class="d-flex justify-content-center align-items-center">
-                            <p>Sunday</p>
-                        </div>
-                    </div>
-                    <div class="item-body p-3">
-                        <div class="item-body-content text-center p-5">
-                            <img src="./imgs/113 (1).png" class="pb-4">
-                            <div class="max-degree">
-                                39.9<sup>o</sup>C
-                            </div>
-                            <div class="min-degree">
-                                26.5<sup>o</sup>C
-                            </div>
-                            <div class="day-status">
-                                sunny
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                
             </div>
         </div>
     </header>
