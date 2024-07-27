@@ -2,7 +2,7 @@ let row =document.querySelector("header .row");
 let searchLocation=document.getElementById("location-form")
 let data=[]
 
-async function getWeather(location="Sohag"){
+async function getWeather(location){
     let result=await fetch(`http://api.weatherapi.com/v1/forecast.json?key=484e8d5714d84a29bae94433242707&q=${location}&days=7`);
     data=await result.json();
     display()
@@ -39,13 +39,13 @@ function display(){
                         <p class="today-status">${data.current.condition.text}</p>
                         <div class="today-details">
                             <span>
-                                <img src="./imgs/icon-umberella.png">20%
+                                <img src="./imgs/icon-umberella.png"> 20%
                             </span>
                             <span>
-                                <img src="./imgs/icon-wind.png">${data.current.wind_kph}km/h
+                                <img src="./imgs/icon-wind.png">${data.current.wind_kph} km/h
                             </span>
                             <span>
-                                <img src="./imgs/icon-compass.png">East
+                                <img src="./imgs/icon-compass.png"> East
                             </span>
                         </div>
 
@@ -97,9 +97,34 @@ function display(){
     `
     row.innerHTML=cartona
 }
-getWeather()
+
 
 async function search(){
     if(searchLocation.value.length>=3)
         await getWeather(searchLocation.value)
 }
+
+function getLocation() {
+    const successCallback = (position) => {
+        var crd = position.coords; 
+        var lat = crd.latitude.toString(); 
+        var lng = crd.longitude.toString(); 
+        var coordinates = [lat, lng]; 
+        console.log(`Latitude: ${lat}, Longitude: ${lng}`); 
+        getCity(coordinates); 
+        return; 
+    };
+    
+    const errorCallback = (error) => {
+        console.log(error);
+    };
+    
+    navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
+    async function getCity(coordinates) { 
+
+        var lat = coordinates[0]; 
+        var lng = coordinates[1]; 
+        getWeather(`${lat},${lng}`)
+    } 
+}
+getLocation()
